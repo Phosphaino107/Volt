@@ -1,0 +1,173 @@
+.cars-page {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background: linear-gradient(135deg, #000, #222);
+    padding: 40px 20px;
+    font-family: monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.page-header h1 {
+    font-size: 3.5rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.888);
+}
+
+.page-header p {
+    font-size: 1.4rem;
+    color: #f5f5f5;
+    margin-bottom: 0;
+}
+
+.car-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.car-card {
+    background-color: #1c1c1c;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 20px;
+    width: calc(33.333% - 20px); /* Display 3 cards per row on larger screens */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 30px rgba(255, 51, 51, 0.3);
+}
+
+.car-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(255, 51, 51, 0.4);
+}
+
+.car-image-container {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.car-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.car-image-container:hover .car-image {
+    transform: scale(1.1);
+}
+
+.car-details h2 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.car-price {
+    font-size: 1.3rem;
+    color: #f5f5f5;
+    margin-bottom: 25px;
+}
+
+.car-features {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+.car-features li {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #dcdcdc;
+    display: flex;
+    align-items: center;
+}
+
+.car-features li::before {
+    content: "✓";
+    color: #ff3333;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.btn-primary {
+    background-color: #ff3333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #ff4d4d;
+    transform: scale(1.05);
+}
+
+/* Media Queries for Responsiveness */
+
+/* Medium screens (tablets, smaller laptops) */
+@media (max-width: 1024px) {
+    .car-card {
+        width: calc(50% - 20px); /* Display 2 cards per row */
+    }
+
+    .page-header h1 {
+        font-size: 3rem; /* Adjust header size */
+    }
+
+    .page-header p {
+        font-size: 1.3rem;
+    }
+}
+
+/* Small screens (phones) */
+@media (max-width: 768px) {
+    .car-card {
+        width: calc(100% - 20px); /* Display 1 card per row */
+    }
+
+    .page-header h1 {
+        font-size: 2.5rem; /* Adjust header size */
+    }
+
+    .page-header p {
+        font-size: 1.2rem;
+    }
+
+    .cars-page {
+        padding: 20px 10px; /* Reduce padding on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .car-card {
+        width: 100%; /* Full width on very small screens */
+    }
+
+    .car-details h2 {
+        font-size: 1.6rem;
+    }
+
+    .btn-primary {
+        font-size: 1rem; /* Slightly smaller button text */
+    }
+}

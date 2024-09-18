@@ -1,0 +1,212 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background: url('../pics/head.jpg');
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    font-family: monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+/* .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background: linear-gradient(to right, #111, #222);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    font-family: monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+} */
+
+/* Default menu hidden */
+.nav-menu {
+    display: none;
+    position: absolute;
+    top: 80px;
+    color: white;
+    right: 0;
+    background:  rgb(0, 0, 0); /* Set menu background to white */
+    width: 50%; /* Menu takes 50% of screen width */
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border: 2px solid #f15656;
+}
+
+/* Open menu (when the menu button is clicked) */
+.nav-menu.open {
+    display: block;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Mobile menu button styling */
+.menu-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.menu-button:hover {
+    transform: rotate(90deg);
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    padding: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav-menu a {
+    color: rgb(255, 255, 255); /* Text color set to black for contrast */
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: inline-block;
+    transition: background 0.4s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-menu a:hover {
+    background: linear-gradient(to right, #ff4d4d, #ffcccc);
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 4px 6px rgba(255, 77, 77, 0.5);
+}
+
+/* Logo Styling */
+.logo a {
+    color: white;
+    font-family: monospace;
+    font-size: 2rem;
+    font-weight: 800;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.logo a:hover {
+    color: #ffcccc;
+    text-shadow: 0 0 5px #ff4d4d;
+}
+
+/* Desktop Nav Menu */
+.nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 50%; /* Set desktop menu width to 50% */
+    justify-content: space-around; /* Space out the menu items */
+    background: white; /* Set background to white */
+}
+
+.nav ul li {
+    margin-left: 40px;
+}
+
+.nav ul li a {
+    color: black; /* Text color set to black for contrast */
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.nav ul li a:hover {
+    background-color: rgba(255, 77, 77, 0.2);
+    color: black; /* Keep the text color black on hover */
+    transform: scale(1.3);
+    box-shadow: 0 4px 6px rgba(255, 77, 77, 0.3);
+}
+
+/* Menu Toggle Button */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transition: background-color 0.3s ease;
+}
+
+.menu-toggle:hover span {
+    background-color: #ffcccc;
+}
+
+@media (max-width: 768px) {
+    .nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: rgb(255, 255, 255); /* Set mobile menu background to white */
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 50%; /* Mobile menu also takes 50% width */
+        text-align: center;
+    }
+
+    .nav ul li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav ul.active {
+        display: flex;
+        animation: slideDown 0.3s ease-out;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,114 @@
+/* src/styles/ContactPage.css */
+
+.contact-page {
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+    color: white;
+    padding: 40px 20px;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-header h1 {
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.contact-header p {
+    font-size: 1.3rem;
+    color: white;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.contact-form-container, .contact-info-container {
+    background-color: #222;
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1 1 300px;
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.2);
+}
+
+.contact-form h2, .contact-info-container h2 {
+    color: red;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+.btn-submit {
+    background-color: red;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #ff4d4d;
+}
+
+.contact-info {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.social-media {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-media h3 {
+    font-size: 1.5rem;
+    color: red;
+    margin-bottom: 10px;
+}
+
+.social-icon {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.3rem;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #ff3333;
+}
